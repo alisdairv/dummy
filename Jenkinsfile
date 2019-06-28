@@ -11,7 +11,7 @@ pipeline {
         stage('Docker build') {
             steps {
                 sh '''
-                    docker build -f Dockerfile . --tag latest
+                    docker build -f Dockerfile . --tag alisdairvravn/dummy-metis:latest
                     
                     docker push alisdairvravn/dummy-metis:latest
                 '''
