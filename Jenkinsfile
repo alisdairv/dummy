@@ -3,15 +3,15 @@
 pipeline {
     agent any 
     stages {
-        stage('Stage 1') {
+        stage('Echo') {
             steps {
                 echo 'Hello world!'
             }
         }
-        stage('Stage 2') {
+        stage('Docker build') {
             steps {
                 sh '''
-                    docker
+                    docker build -f Dockerfile . --tag dummy
                 '''
             }
         }
