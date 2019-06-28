@@ -12,6 +12,8 @@ pipeline {
             steps {
                 sh '''
                     docker build -f Dockerfile . --tag dummy
+                    
+                    docker push alisdairvravn/dummy-metis:latest
                 '''
             }
         }
